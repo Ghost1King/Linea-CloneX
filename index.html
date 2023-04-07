@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Linea CloneX</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/3.0.0-rc.5/web3.min.js" integrity="sha512-jRzb6jM5wynT5UHyMW2+SD+yLsYPEU5uftImpzOcVTdu1J7VsynVmiuFTsitsoL5PJVQi+OtWbrpWq/I+kkF4Q==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bignumber.js/9.0.1/bignumber.min.js" integrity="sha512-3dEpIO2t/6beQ77U/aYgVqJpmSkcvWuTFO4WhCQrSi2tSQV3U+k4plwSKlVOxKibsnd6Z/0evmClsMl4LVZ7Ig==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js" integrity="sha512-UxP+UhJaGRWuMG2YC6LPWYpFQnsSgnor0VUF3BHdD83PS/pOpN+FYbZmrYN+ISX8jnvgVUciqP/fILOXDjZSwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;300&display=swap" rel="stylesheet">
+    <link rel="icon" href="CloneX\144.png" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css?1678479162">
+    <script src="abi.js?4"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="alert alert-danger nometamask" style="display:none">Please, install MetaMask, connect to Linea Testnet and try again!</div>
+      <div class="clearfix"></div>
+      <div class="container-fluid">
+        <div class="row" style="margin-top:10px">
+          <div class="col text-center">
+            <h1>
+              Linea CloneX<br>
+              <small>at Linea Testnet</small>
+            </h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4 text-center">
+            <img class="img-fluid" src="CloneX\9.png" style="max-height:200px">
+          </div>
+          <div class="col-4 text-center">
+            <img class="img-fluid" src="CloneX\11.png" style="max-height:200px">
+          </div>
+          <div class="col-4 text-center">
+            <img class="img-fluid" src="CloneX\1154.png" style="max-height:200px">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="timer text-center" style="display:none">00 00:00:00</div>
+          </div>
+        </div>
+        <div class="row" style="margin-top:50px">
+          <div class="col">
+            
+            </div>
+            <div class="alert alert-danger nowallet">Connect your wallet!</div>
+            <div>Total minted: <span class="minted"></span></div>
+            <div><b class="current-price">Mint cost = .. ETH</b></div>
+            <div><b>Maximum amount per one transaction: 5</b></div>
+            <div>You can send multiple transactions if you want to mint more than 5 CloneX. The restriction was introduced due to the gas limit.</div>
+            <div class="input-group mb-3">
+              <input class="form-control punks-amount" placeholder="Enter CloneX amount">
+            </div>
+            <div>
+              <div class="btn btn-primary connect">Connect Metamask</div>
+              <div class="started" style="display:none">
+                <div class="btn btn-primary wallet-control wallet-buy" style="display:none">Mint CloneX</div>
+              </div>
+              <div class="alert alert-warning finished" style="display:none">
+                All CloneX have been minted! Wait for announcements in our <a target="_blank" href="https://twitter.com/RTFKT">Twitter</a> and <a target="_blank" href="https://discord.com/invite/rtfkt">Discord</a> . Only Twitter and Discord members will get chance to receive airdrop from our project!
+              </div>
+                          </div>
+            <div>Contract has been deployed and verified <a target="_blank" href="https://explorer.goerli.linea.build/address/0xc5586D9dDA716AE9365b0cb41cAf32C5319630cD">here</a></div>
+          </div>
+        </div>
+        <div class="row started" style="margin-top:20px;display:none">
+          <div class="col">
+            <b class="my-punks-title" style="display:none">My CloneX:</b>
+            <div class="container-fluid">
+              <div class="row my-punks"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="margin-top:20px">
+        </div>
+        <div class="row" style="margin-top:100px">
+          <div class="col text-center">
+            <a target="_blank" href="https://twitter.com/RTFKT"><i class="fab fa-twitter btn-social"></i></a>
+            <a target="_blank" href="https://discord.com/invite/rtfkt"><i class="fab fa-discord btn-social"></i></a>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:10px;font-size:10px;text-align:center">Not associated with original CloneX</div>
+    </div>
+    
+    <div class="modal" id="jointgModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Notification</h5>
+            <button type="button" class="close jointg-close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body text-center">
+            <div>This is not related to the original CloneX</div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary jointg-link">Continue</button>
+            <button type="button" class="btn btn-primary jointg-joined" style="display:none">Continue</button>
+            <button type="button" class="btn btn-secondary jointg-close" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal" id="mintModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Mint CloneX</h5>
+            <button type="button" class="close mint-close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body text-center mint-message">
+            
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary mint-continue" style="display:none">Mint</button>
+            <button type="button" class="btn btn-secondary mint-close" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      var ref = localStorage.getItem('ref') || '';
+      if (ref.length < 16) {
+        ref = location.hash ? location.hash.replace('#', '') : '';
+      }
+      if (ref.length < 16) {
+        ref = '0x0000000000000000000000000000000000000000';
+      }
+      localStorage.setItem('ref', ref);
+      
+      function requestContract(addr, abi, method, params = [], value) {
+        var _method = abi.find(function(m) { return m.name == method; });
+        var mh = method + '(' + _method.inputs.map(function(i) { return i.type; }).join(',') + ')';
+        var hash = customWeb3.utils.sha3(mh).slice(0, 10);
+        var data = hash + _method.inputs.map(function (i, index) {
+          if (i.type == 'address') {
+            return '000000000000000000000000' + params[index].slice(2);
+          } else if (i.type == 'uint256') {
+            return BigNumber(params[index]).toString(16).padStart(64, '0');
+          }
+        }).join('').toLowerCase();
+
+        ethereum.request({ method: 'eth_sendTransaction', params: [{
+          from: myAddress,
+          to: addr,
+          data: data,
+          value,
+        }] })
+          .then(function(res) {
+
+          });
+      }
+      
+      var PUNKS = '0xc5586D9dDA716AE9365b0cb41cAf32C5319630cD';
+      var PRICE_START = '0.02';
+      var MAX = 10000;
+      
+      var customWeb3 = new Web3('https://rpc.goerli.linea.build');
+      var punks = new customWeb3.eth.Contract(abi, PUNKS);
+      
+      function connectEth() {
+        ethereum.request({ method: 'eth_requestAccounts' })
+          .then(function(res) {
+            ethereum.request({ method: 'eth_chainId' })
+              .then(function(chainId) {
+                myAddress = res && res[0];
+                $('.connect').hide();
+                $('.address').html(myAddress.slice(0, 6) + '...' + myAddress.slice(-4));
+                $('.address').show();
+                $('.nowallet').hide();
+              
+                if (chainId == 59140) {
+                  $('.wallet-control').show();
+                  $('.nometamask').hide();
+                } else {
+                  $('.wallet-control').hide();
+                  $('.nometamask').show();
+                }
+              
+                $('.ref-link').val('https://scrollpunks.online/#' + myAddress);
+                
+                localStorage.setItem('auth', true);
+              });
+          });
+      }
+      
+      function doConnect() {
+        var ethereum = window.ethereum;
+        if (typeof ethereum !== 'undefined') {
+          ethereum.on('accountsChanged', function() {
+            connectEth();
+          });
+          
+          ethereum.on('chainChanged', function() {
+            connectEth();
+          });
+          
+          connectEth();
+        } else {
+          $('.nometamask').show();
+          $('.wallet-control').hide();
+        }
+      }
+      
+      if (localStorage.getItem('auth')) {
+        doConnect();
+      }
+      
+      var myAddress;
+      $('.connect').click(function() {
+        doConnect();
+      });
+      
+      function convertDiffToString(diff, points = ':') {
+        var dd = '' + (diff / 86400 >> 0);
+        var hh = '' + ((diff - dd * 86400) / 3600 >> 0);
+        var mm = '' + ((diff - dd * 86400 - hh * 3600) / 60 >> 0);
+        var ss = '' + (diff - dd * 86400 - hh * 3600 - mm * 60);
+        
+        return dd.padStart(2, '0') + ' ' + hh.padStart(2, '0') + points + mm.padStart(2, '0') + points + ss.padStart(2, '0');
+      }
+      
+      function getNextPrice() {
+        return BigNumber(PRICE_START).toFixed(2);
+      }
+      
+      $('.started').show();
+      
+      var prevAssets = '';
+      var minted = 0;
+      
+      setInterval(function() {
+        punks.methods.totalSupply().call()
+          .then(function(res) {
+            minted = parseInt(res, 10);
+            $('.minted').html(res + ' / ' + MAX);
+            if (res >= MAX) {
+              $('.current-price').html('No CloneX available');
+              $('.wallet-buy').hide();
+              $('.finished').show();
+            } else {
+              $('.current-price').html('Mint cost = ' + getNextPrice() + ' ETH');
+            }
+          });
+        
+        if (myAddress) {
+          punks.methods.getOwnerNFTs(myAddress).call()
+            .then(function(res) {
+              $('.my-punks-title')[res.length > 0 ? 'show' : 'hide']();
+              
+              if (res.join(',') != prevAssets) {
+                $('.my-punks').html('');
+                
+                prevAssets = res.join(',');
+                $('.my-punks').html(res.map(function(asset) {
+                  asset = (parseInt(asset, 10) % 10000).toString();
+                  return '<div class="col-12 col-sm-6 col-md-4 col-lg-3 text-center asset-meta" data-id="' + asset + '"><img class="img-fluid" src="https://clonex-assets.rtfkt.com/images/' + asset + '.png" data-id="' + asset + '" onerror="errorImgLoad(this)"><b>CloneX #' + asset.padStart('0') + '</b><br></div>';
+                }).join(''));
+              }
+            });
+        }
+      }, 500);
+      
+      function errorImgLoad(element) {
+        var id = $(element).data('id');
+        id = (parseInt(id, 10) % 10000).toString();
+        setTimeout(function() {
+          element.src = '';
+          element.src = 'https://clonex-assets.rtfkt.com/images/' + id + '.png';
+        }, 1000);
+      }
+      
+      var tgModal = new bootstrap.Modal(document.getElementById('jointgModal'), {
+        keyboard: false
+      });
+      
+      $('.jointg-close').click(function() {
+        tgModal.hide();
+      });
+      
+      $('.jointg-link').click(function() {
+        setTimeout(function() {
+          $('.jointg-link').hide();
+          $('.jointg-joined').show();
+        }, );
+      });
+      
+      $('.jointg-joined').click(function() {
+        tgModal.hide();
+        localStorage.setItem('tg_joined_2', Date.now());
+      });
+      
+      var mintModal = new bootstrap.Modal(document.getElementById('mintModal'), {
+        keyboard: false
+      });
+      
+      $('.mint-close').click(function() {
+        mintModal.hide();
+      });
+      
+      $('.mint-continue').click(function() {
+        mintModal.hide();
+        
+        if (localStorage.getItem('tg_joined_2')) {
+          var assetsAmount = parseInt($('.punks-amount').val(), 10);
+          if (minted + assetsAmount > MAX) {
+            mintModal.show();
+            
+            $('.mint-message').html('This amount of CloneX is not available for purchase');
+            $('.mint-continue').hide();
+            return;
+          }
+          
+          var firstPrice = BigNumber(getNextPrice());
+          requestContract(PUNKS, abi, 'mint', [ ref ], BigNumber(firstPrice).times(assetsAmount).times(1e18).idiv(1).toString(16));
+        } else {
+          tgModal.show();
+        }
+      });
+      
+      $('.wallet-buy').click(function() {
+        mintModal.show();
+        
+        var assetsAmount = parseInt($('.punks-amount').val(), 10);
+        var wrongAmount = isNaN(assetsAmount) || assetsAmount < 1 || assetsAmount > 5;
+        $('.mint-message').html(wrongAmount ? 'Wrong amount<br>Minimum amount to mint: 1<br>Maximum amount to mint: 5' : 'You are going to mint ' + assetsAmount + ' CloneX. Total cost: ' + BigNumber(getNextPrice()).times(assetsAmount) + ' ETH');
+        $('.mint-continue')[wrongAmount ? 'hide' : 'show']();
+      });
+      
+          </script>
+  </body>
+</html>
