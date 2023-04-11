@@ -20,7 +20,10 @@ Linea Network can be particularly beneficial for decentralized finance (DeFi) ap
 * Currency Symbol: ETH
 * Block Explorer URL: https://explorer.goerli.linea.build
 * Click “Save” and you’re done.
-3. Enter the number of Clones you want to mint and click the mint button.
-4. At the top of the page you will see a message saying how many Clones you want to mint and how much it will cost, press Mint if you agree with this.
-5. In the next window, a notification will appear that these are not original Clones, if you agree, then click Continue.
-6. After the dialog box disappears, click on the Mint button again
+3. Enter the number of Clones you want to mint and click the "Mint" button.
+4. At the top of the page you will see a message saying how many Clones you want to mint and how much it will cost, press "Mint" if you agree with this.
+5. In the next window, a notification will appear that these are not original Clones, if you agree, then click "Continue".
+6. After the dialog box disappears, click on the "Mint" button again
+7. You will see a confirmation message at the top of the page about how many Clones you want to mint and how much it will cost, if you agree then click on the "Mint" button, and confirm the transaction in your wallet
+8. You will see your CloneX at the bottom of the page, under the text "My CloneX"
+9. If you see your CloneX, then I Congratulate you, your minted your CloneX on the Linea Network!
