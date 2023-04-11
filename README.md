@@ -27,4 +27,4 @@ Linea Network can be particularly beneficial for decentralized finance (DeFi) ap
 7. You will see a confirmation message at the top of the page about how many Clones you want to mint and how much it will cost, if you agree then click on the "Mint" button, and confirm the transaction in your wallet
 8. You will see your CloneX at the bottom of the page, under the text "My CloneX"
 9. If you see your CloneX, then I Congratulate you, your minted your CloneX on the Linea Network! 
-10. You also tested the Linea Testnet.
+10. You also tested the Linea Testnet!
