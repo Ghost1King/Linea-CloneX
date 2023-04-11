@@ -10,7 +10,7 @@ Linea Network utilizes optimistic rollups, a popular Layer 2 scaling solution. O
 Linea Network can be particularly beneficial for decentralized finance (DeFi) applications, non-fungible tokens (NFTs), and other use cases that require high transaction throughput and low fees. It can help make Ethereum more accessible and usable, addressing some of the scalability issues that have hindered broader adoption.
 
 # How To Mint?
-1. You must go to https://lineaclonex.vercel.app/
+1. You must go to https://www.lineaclonex.xyz/
 2. Connect your wallet to dapps on the Linea Testnet network. No Linea Testnet Netwokr?
 * Adding the Linea network
 * Go to your Metamask wallet, open Settings, then open Networks, click “Add Networks” and enter the testnet data:
